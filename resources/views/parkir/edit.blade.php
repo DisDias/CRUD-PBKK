@@ -61,7 +61,7 @@
 
                 {{-- <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Lokasi</label>
-                    <input name="tempat" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{$lokasiParkir->tempat}}">
+                    <input name="nama" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{$lokasiParkir->nama}}">
                 </div>
 
                 <div class="mb-3">

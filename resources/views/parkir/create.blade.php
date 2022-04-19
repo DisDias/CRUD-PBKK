@@ -77,6 +77,14 @@
                                                 @enderror
                                         </div>
 
+                                        <div class="form-group">
+                                            <label for="nama">Lokasi</label>
+                                            <input class="form-control" type="text" name="nama" value="{{ old('nama') }}" class="@error('nama') is-invalid @enderror">
+                                            @error('nama')
+                                                       <div class="alert alert-danger">{{ $message }}</div>
+                                               @enderror
+                                        </div>
+
                                         <div class="form-group" align="right">
                                             <input class="btn btn-primary" type="submit" value="Submit">
                                         </div>

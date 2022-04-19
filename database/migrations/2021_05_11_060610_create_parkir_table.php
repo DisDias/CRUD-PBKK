@@ -15,6 +15,7 @@ class CreateParkirTable extends Migration
     {
         Schema::create('parkir', function (Blueprint $table) {
             $table->increments('nomor_tiket');
+            $table->foreignId('location_id');
             $table->string('nomor_polisi');
             $table->string('jenis_kendaraan');
             $table->date('tgl_masuk');

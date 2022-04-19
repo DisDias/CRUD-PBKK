@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Parkir;
-use App\Models\lokasiParkir;
+use App\Models\Location;
 
 class ParkirController extends Controller
 {
@@ -24,20 +24,24 @@ class ParkirController extends Controller
             'jam_masuk' => 'required',
             'jam_keluar' => 'required',
         ]);*/
-        Parkir::create($request->all());
-        /*$data_parkir = $request->all();
+        //Parkir::create($request->all());
+        $data_parkir = $request->all();
+
+        $lokasiParkir = new Location;
+        $lokasiParkir->nama = $data_parkir['nama'];
+        $lokasiParkir->save();
+
+
         $parkir = new Parkir;
+        $parkir->location_id = $lokasiParkir->id;
         $parkir->nomor_polisi = $data_parkir['nomor_polisi'];
         $parkir->jenis_kendaraan = $data_parkir['jenis_kendaraan'];
         $parkir->tgl_masuk = $data_parkir['tgl_masuk'];
         $parkir->tgl_keluar = $data_parkir['tgl_keluar'];
         $parkir->jam_masuk = $data_parkir['jam_masuk'];
         $parkir->jam_keluar = $data_parkir['jam_keluar'];
+        $parkir->save();
 
-        $lokasiParkir = new lokasiParkir;
-        $lokasiParkir->parkir_id = $parkir->nomor_tiket;
-        $lokasiParkir->tempat = $data_parkir['tempat'];
-        $lokasiParkir->lantai = $data_parkir['lantai'];*/
         return redirect('/')->with('sukses', 'Data Berhasil Ditambahkan');
     }
 

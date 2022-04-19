@@ -40,7 +40,6 @@
                         <td>{{$parkir->tgl_keluar}}</td>
                         <td>{{$parkir->jam_masuk}}</td>
                         <td>{{$parkir->jam_keluar}}</td>
-                      
                         <td>
                             <a href="/parkir/{{$parkir->nomor_tiket}}/edit" class="btn btn-warning btn-sm"></i>Edit</a>
                             <a href="/parkir/{{$parkir->nomor_tiket}}/delete" class="btn btn-danger btn-sm" onclick="return confirm('Apakah Anda Yakin Menghapus Data?');"></i>Delete</a>
@@ -105,12 +104,12 @@
                         </div>
                     </div>
 
-                    {{-- <div class="form-group">
+                    <div class="form-group">
                         <label for="exampleInputEmail1" class="form-label">Lokasi</label>
-                        <input name="tempat" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        <input name="nama" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                     </div>
 
-                    <div class="form-group">
+                    {{-- <div class="form-group">
                         <label for="exampleInputEmail1" class="form-label">Lantai</label>
                         <input name="lantai" type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                     </div> --}}
